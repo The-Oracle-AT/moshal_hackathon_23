@@ -1,22 +1,22 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import AuthenticationPage from './majorComponents/AuthenticationPage.tsx'
 import Contact from './majorComponents/Contact.tsx'
-import Home from './majorComponents/Home.tsx'
-import NavigationBar from './majorComponents/NavigationBar.tsx'
+import LandingPage from './majorComponents/LandingPage.tsx'
 import NoPage from './majorComponents/NoPage.tsx'
-import Profile from './majorComponents/Profile.tsx'
+import SignInPage from './majorComponents/SignInPage.tsx'
+import LandingNavBar from './minorComponents/LandingNavBar.tsx'
 import Login from './minorComponents/Login.tsx'
-import SignUp from './minorComponents/Signup.tsx'
+import Profile from './minorComponents/Profile.tsx'
+import SignUp from './minorComponents/SignUp.tsx'
 function App() {
 
   return (
     <>
     <BrowserRouter>
       <Routes>
-        <Route path ='/' element={<NavigationBar />}>
-          <Route index element={<Home/>}/>
-          <Route path='authenticationPage' element={<AuthenticationPage/>}>
+        <Route path ='/' element={<LandingNavBar />}>
+          <Route index element={<LandingPage/>}/>
+          <Route path='signInPage' element={<SignInPage/>}>
             <Route path='logIn' element={<Login/>}/>
             <Route path='signUp' element={<SignUp/>} />
           </Route>

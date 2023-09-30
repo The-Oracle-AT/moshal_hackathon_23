@@ -1,4 +1,4 @@
-import ContactForm from "../minorComponents/contactForm";
+import ContactForm from "../minorComponents/ContactForm";
 const Contact: React.FC = () => {
     return (
         <div>
